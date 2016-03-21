@@ -9,7 +9,7 @@ SYSTEM = $(TOPDIR)/vmlinux
 
 OBJECTS = $(HEAD) misc.o
 
-CFLAGS = $(CPPFLAGS) -O2 -DSTDC_HEADERS
+CFLAGS = $(CPPFLAGS) -DSTDC_HEADERS -O1 -fno-defer-pop -fno-thread-jumps -fno-strict-aliasing -fno-omit-frame-pointer
 ZLDFLAGS = -e startup_32
 
 #
